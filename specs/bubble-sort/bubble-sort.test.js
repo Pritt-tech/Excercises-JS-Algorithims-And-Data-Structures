@@ -11,7 +11,20 @@
 */
 
 function bubbleSort(nums) {
-  // code goes here
+  // code goes 
+  let swapped = false;
+  do{
+    swapped = false;
+    for(let k=0; k<nums.length; k++){
+      if(nums[k]> nums[k+1]){
+        let temp = nums[k];
+        nums[k] = nums[k+1];
+        nums[k+1] = temp;
+        swapped = true;
+      }
+    }
+  }while (swapped);
+  return nums;
 }
 
 // unit tests
